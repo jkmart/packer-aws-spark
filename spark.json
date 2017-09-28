@@ -9,6 +9,8 @@
     "aws_instance_type":    "t2.micro",
     "aws_region":           "{{env `aws_region`}}",
     "aws_secret_key":       "{{env `aws_secret_key`}}",
+    "aws_vpc_id":           "",
+    "aws_subnet_id":        "",
     "aws_ssh_username":     "admin",
     "java_build_number":    "01",
     "java_major_version":   "8",
@@ -29,6 +31,8 @@
     "region":                      "{{user `aws_region`}}",
     "instance_type":               "{{user `aws_instance_type`}}",
     "ssh_username":                "{{user `aws_ssh_username`}}",
+    "vpc_id":                      "{{user `aws_vpc_ic`}}",
+    "subnet_id":                   "{{user `aws_subnet_id`}}",
     "associate_public_ip_address": true,
     "ami_name":                    "{{user `aws_ami_name_prefix`}}{{user `aws_ami_name`}}-{{user `spark_version`}}_{{user `hadoop_version`}}-({{isotime \"20060102150405\"}})",
     "source_ami_filter": {
